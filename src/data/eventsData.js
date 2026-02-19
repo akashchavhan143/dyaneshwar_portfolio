@@ -1,31 +1,37 @@
 // Events data for auto-scrolling section
+import image1 from "./images/IMG-20251128-WA0063.jpg.jpeg"
+import image2 from "./images/IMG-20260103-WA0011.jpg.jpeg"
+import image3 from "./images/IMG-20260219-WA0025.jpg.jpeg"
+import image4 from "./images/IMG-20260219-WA0026.jpg.jpeg"
+
+
 export const events = [
   {
     id: 1,
     title: "Health Awareness Workshop",
     description: "Conducted a comprehensive health awareness workshop in the community, educating residents about preventive healthcare and wellness practices.",
-    image: "https://images.pexels.com/photos/15377735/pexels-photo-15377735.jpeg",
+    image: image1,
     date: "June 2025"
   },
   {
     id: 2,
     title: "Medical Team Collaboration",
     description: "Participated in interdisciplinary medical team meetings at K.J. Somaiya Hospital, coordinating patient care and support services.",
-    image: "https://images.pexels.com/photos/6129442/pexels-photo-6129442.jpeg",
+    image: image2,
     date: "August 2025"
   },
   {
     id: 3,
     title: "Community Service Initiative",
     description: "Led volunteer team in community cleanup and awareness campaign, promoting environmental health and community engagement.",
-    image: "https://images.unsplash.com/photo-1758599669406-d5179ccefcb9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHwzfHxWb2x1bnRlZXIlMjBjb21tdW5pdHklMjBzZXJ2aWNlJTIwaGVscGluZyUyMHBlb3BsZSUyMHBlb3BsZXxlbnwwfDB8fHwxNzcxNDg0NTQ5fDA&ixlib=rb-4.1.0&q=85",
+    image: image3,
     date: "May 2025"
   },
   {
     id: 4,
     title: "36th CIF International Conference",
     description: "Coordinated event logistics and provided delegate support at the international conference held at TISS Mumbai.",
-    image: "https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg",
+    image: image4,
     date: "March 2024"
   },
   {

@@ -1,3 +1,4 @@
+import heroImg from "./images/HERO_IMAGE.jpg";
 export const personalInfo = {
   name: "DNYANESHWAR JAYRAM JADHAV",
   title: "Social Work Professional | MSW Student",
@@ -5,7 +6,8 @@ export const personalInfo = {
   phone: "8766438432",
   email: "jadhavdnyaneshwar231000@gmail.com",
   languages: ["Marathi", "Hindi", "English (Working Knowledge)"],
-  introduction: "A dedicated and compassionate Social Work professional with a BSW degree and currently pursuing MSW. I want to work in the social development field where I can support students and communities through mentoring, field work, and coordination. I aim to learn, grow, and use my skills to help young people continue their education and build a better future."
+  introduction: "A dedicated and compassionate Social Work professional with a BSW degree and currently pursuing MSW. I want to work in the social development field where I can support students and communities through mentoring, field work, and coordination. I aim to learn, grow, and use my skills to help young people continue their education and build a better future.",
+  hero_image:heroImg
 };
 
 export const careerObjective = "A dedicated and compassionate Social Work professional with a BSW degree and currently pursuing MSW. I want to work in the social development field where I can support students and communities through mentoring, field work, and coordination. I aim to learn, grow, and use my skills to help young people continue their education and build a better future.";

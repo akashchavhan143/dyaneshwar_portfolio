@@ -51,7 +51,7 @@ const Navbar = () => {
     e.preventDefault();
     const element = document.querySelector(href);
     if (element) {
-      const offset = 80; // navbar height
+      const offset = 72; // navbar height
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
 
@@ -78,7 +78,7 @@ const Navbar = () => {
       }}
     >
       <div className="container-custom px-4 md:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-18">
           {/* Logo */}
           <motion.a
             href="#home"
@@ -88,7 +88,7 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            DJ
+            DJ_PORTFOLIO
           </motion.a>
 
           {/* Desktop Navigation */}

@@ -1,6 +1,17 @@
-import { motion } from 'framer-motion';
-import { Download, MapPin, Phone, Mail, Linkedin, Github, Twitter } from 'lucide-react';
-import { personalInfo } from '../data/portfolioData';
+import { motion } from "framer-motion";
+import {
+  Download,
+  MapPin,
+  Phone,
+  Mail,
+  Linkedin,
+  Github,
+  Twitter,
+  Instagram,
+  Facebook,
+  DownloadCloud,
+} from "lucide-react";
+import { personalInfo } from "../data/portfolioData";
 
 /**
  * Hero Section Component
@@ -10,29 +21,52 @@ import { personalInfo } from '../data/portfolioData';
 const Hero = () => {
   const handleDownloadResume = () => {
     // Placeholder for resume download functionality
-    alert('Resume download feature - Please link your actual resume file here');
+    alert("Resume download feature - Please link your actual resume file here");
   };
 
   // Social media links configuration
   const socialLinks = [
-    { icon: Linkedin, href: '#', label: 'LinkedIn', color: '#0A66C2' },
-    { icon: Github, href: '#', label: 'GitHub', color: '#333' },
-    { icon: Twitter, href: '#', label: 'Twitter', color: '#1DA1F2' }
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/dnyaneshwar-jadhav-ba3aaa252?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      label: "LinkedIn",
+      color: "#0A66C2",
+    },
+    // { icon: Github, href: '#', label: 'GitHub', color: '#333' },
+    {
+      icon: Twitter,
+      href: "https://www.instagram.com/dnyaneshwar_2310?igsh=MXMwN2gxZ2FkbnNyMQ==",
+      label: "Twitter",
+      color: "#1DA1F2",
+    },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/dnyaneshwar_2310?igsh=MXMwN2gxZ2FkbnNyMQ==",
+      label: "Instgram",
+      color: "#f21d41",
+    },
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/share/1FCyyA5aMx/",
+      label: "facebook",
+      color: "#1DA1F2",
+    },
   ];
 
   return (
-    <section 
-      id="home" 
-      className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden"
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center pt-5 relative overflow-hidden"
       style={{
-        background: 'linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-background) 50%, var(--color-background-alt) 100%)'
+        background:
+          "linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-background) 50%, var(--color-background-alt) 100%)",
       }}
     >
       {/* Animated background shapes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           className="absolute top-20 left-10 w-72 h-72 rounded-full opacity-20"
-          style={{ background: 'var(--color-primary)' }}
+          style={{ background: "var(--color-primary)" }}
           animate={{
             scale: [1, 1.2, 1],
             rotate: [0, 90, 0],
@@ -40,12 +74,12 @@ const Hero = () => {
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: "linear"
+            ease: "linear",
           }}
         />
         <motion.div
           className="absolute bottom-20 right-10 w-96 h-96 rounded-full opacity-10"
-          style={{ background: 'var(--color-secondary)' }}
+          style={{ background: "var(--color-secondary)" }}
           animate={{
             scale: [1, 1.3, 1],
             rotate: [0, -90, 0],
@@ -53,7 +87,7 @@ const Hero = () => {
           transition={{
             duration: 25,
             repeat: Infinity,
-            ease: "linear"
+            ease: "linear",
           }}
         />
       </div>
@@ -76,13 +110,13 @@ const Hero = () => {
                 <span className="badge text-sm">Social Work Professional</span>
               </motion.div>
 
-              <h1 
+              <h1
                 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
-                style={{ color: 'var(--color-text-primary)' }}
+                style={{ color: "var(--color-text-primary)" }}
               >
                 {personalInfo.name}
               </h1>
-              
+
               <p className="text-xl md:text-2xl gradient-text font-semibold mb-6">
                 {personalInfo.title}
               </p>
@@ -93,7 +127,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-lg mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0"
-              style={{ color: 'var(--color-text-secondary)' }}
+              style={{ color: "var(--color-text-secondary)" }}
             >
               {personalInfo.introduction}
             </motion.p>
@@ -105,25 +139,52 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8"
             >
-              <div className="flex items-center gap-2 px-4 py-2 rounded-full" style={{ backgroundColor: 'var(--color-background)', border: '1px solid var(--color-border)' }}>
+              <div
+                className="flex items-center gap-2 px-4 py-2 rounded-full"
+                style={{
+                  backgroundColor: "var(--color-background)",
+                  border: "1px solid var(--color-border)",
+                }}
+              >
                 <MapPin size={18} className="text-primary" />
-                <span className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>{personalInfo.location}</span>
+                <span
+                  className="text-sm"
+                  style={{ color: "var(--color-text-secondary)" }}
+                >
+                  {personalInfo.location}
+                </span>
               </div>
-              <a 
+              <a
                 href={`tel:${personalInfo.phone}`}
-                className="flex items-center gap-2 px-4 py-2 rounded-full hover:scale-105 transition-transform" 
-                style={{ backgroundColor: 'var(--color-background)', border: '1px solid var(--color-border)' }}
+                className="flex items-center gap-2 px-4 py-2 rounded-full hover:scale-105 transition-transform"
+                style={{
+                  backgroundColor: "var(--color-background)",
+                  border: "1px solid var(--color-border)",
+                }}
               >
                 <Phone size={18} className="text-primary" />
-                <span className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>{personalInfo.phone}</span>
+                <span
+                  className="text-sm"
+                  style={{ color: "var(--color-text-secondary)" }}
+                >
+                  {personalInfo.phone}
+                </span>
               </a>
-              <a 
+              <a
                 href={`mailto:${personalInfo.email}`}
-                className="flex items-center gap-2 px-4 py-2 rounded-full hover:scale-105 transition-transform" 
-                style={{ backgroundColor: 'var(--color-background)', border: '1px solid var(--color-border)' }}
+                className="flex items-center gap-2 px-4 py-2 rounded-full hover:scale-105 transition-transform"
+                style={{
+                  backgroundColor: "var(--color-background)",
+                  border: "1px solid var(--color-border)",
+                }}
               >
                 <Mail size={18} className="text-primary" />
-                <span className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>{personalInfo.email}</span>
+                <span
+                  className="text-sm"
+                  style={{ color: "var(--color-text-secondary)" }}
+                >
+                  {personalInfo.email}
+                </span>
               </a>
             </motion.div>
 
@@ -132,26 +193,26 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8"
+              className="flex flex-wrap justify-center  lg:justify-start gap-4 mb-8"
             >
               <motion.button
                 onClick={handleDownloadResume}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="btn-primary"
+                className="btn-primary rounded-lg"
               >
-                <Download size={20} />
+                <DownloadCloud size={20} />
                 Download Resume
               </motion.button>
-              
+
               <motion.a
                 href="#contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300"
-                style={{ 
-                  border: '2px solid var(--color-primary)',
-                  color: 'var(--color-primary)'
+                style={{
+                  border: "2px solid var(--color-primary)",
+                  color: "var(--color-primary)",
                 }}
               >
                 Get In Touch
@@ -172,11 +233,14 @@ const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300"
-                  style={{ backgroundColor: 'var(--color-background)', border: '1px solid var(--color-border)' }}
-                  whileHover={{ 
+                  style={{
+                    backgroundColor: "var(--color-background)",
+                    border: "1px solid var(--color-border)",
+                  }}
+                  whileHover={{
                     scale: 1.1,
                     backgroundColor: social.color,
-                    borderColor: social.color
+                    borderColor: social.color,
                   }}
                   whileTap={{ scale: 0.95 }}
                   aria-label={social.label}
@@ -199,11 +263,14 @@ const Hero = () => {
           >
             <div className="relative max-w-md mx-auto">
               {/* Decorative background */}
-              <div 
+              <div
                 className="absolute inset-0 rounded-full opacity-20 blur-3xl"
-                style={{ background: 'linear-gradient(135deg, var(--color-primary), var(--color-secondary))' }}
+                style={{
+                  background:
+                    "linear-gradient(135deg, var(--color-primary), var(--color-secondary))",
+                }}
               />
-              
+
               {/* Profile image container */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <motion.div
@@ -211,7 +278,7 @@ const Hero = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <img
-                    src="https://images.pexels.com/photos/17311570/pexels-photo-17311570.jpeg"
+                    src={personalInfo.hero_image}
                     alt={personalInfo.name}
                     className="w-full h-auto object-cover"
                   />
@@ -226,12 +293,28 @@ const Hero = () => {
                 transition={{ duration: 0.6, delay: 1 }}
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ background: 'linear-gradient(135deg, var(--color-primary), var(--color-secondary))' }}>
+                  <div
+                    className="w-12 h-12 rounded-full flex items-center justify-center"
+                    style={{
+                      background:
+                        "linear-gradient(135deg, var(--color-primary), var(--color-secondary))",
+                    }}
+                  >
                     <span className="text-2xl">🎓</span>
                   </div>
                   <div>
-                    <p className="text-sm font-semibold" style={{ color: 'var(--color-text-primary)' }}>MSW Student</p>
-                    <p className="text-xs" style={{ color: 'var(--color-text-tertiary)' }}>Nirmala Niketan</p>
+                    <p
+                      className="text-sm font-semibold"
+                      style={{ color: "var(--color-text-primary)" }}
+                    >
+                      MSW Student
+                    </p>
+                    <p
+                      className="text-xs"
+                      style={{ color: "var(--color-text-tertiary)" }}
+                    >
+                      Nirmala Niketan
+                    </p>
                   </div>
                 </div>
               </motion.div>
