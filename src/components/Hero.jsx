@@ -12,6 +12,7 @@ import {
   DownloadCloud,
 } from "lucide-react";
 import { personalInfo } from "../data/portfolioData";
+import resumeFile from "../data/resume/DJ_RESUME.pdf"
 
 /**
  * Hero Section Component
@@ -19,10 +20,7 @@ import { personalInfo } from "../data/portfolioData";
  * Includes social media links and contact information
  */
 const Hero = () => {
-  const handleDownloadResume = () => {
-    // Placeholder for resume download functionality
-    alert("Resume download feature - Please link your actual resume file here");
-  };
+
 
   // Social media links configuration
   const socialLinks = [
@@ -52,7 +50,14 @@ const Hero = () => {
       color: "#1DA1F2",
     },
   ];
-
+const handleDownloadResume = () => {
+  const link = document.createElement("a");
+  link.href = resumeFile;
+  link.download = "DJ_RESUME.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
   return (
     <section
       id="home"
@@ -137,18 +142,18 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8"
+              className="flex flex-wrap justify-center lg:justify-start gap-3 mb-8"
             >
               <div
-                className="flex items-center gap-2 px-4 py-2 rounded-full"
+                className="flex items-center gap-2 px-3 py-2 rounded-full text-sm"
                 style={{
                   backgroundColor: "var(--color-background)",
                   border: "1px solid var(--color-border)",
                 }}
               >
-                <MapPin size={18} className="text-primary" />
+                <MapPin size={16} className="text-primary flex-shrink-0" />
                 <span
-                  className="text-sm"
+                  className="text-xs sm:text-sm truncate"
                   style={{ color: "var(--color-text-secondary)" }}
                 >
                   {personalInfo.location}
@@ -156,15 +161,15 @@ const Hero = () => {
               </div>
               <a
                 href={`tel:${personalInfo.phone}`}
-                className="flex items-center gap-2 px-4 py-2 rounded-full hover:scale-105 transition-transform"
+                className="flex items-center gap-2 px-3 py-2 rounded-full hover:scale-105 transition-transform text-sm"
                 style={{
                   backgroundColor: "var(--color-background)",
                   border: "1px solid var(--color-border)",
                 }}
               >
-                <Phone size={18} className="text-primary" />
+                <Phone size={16} className="text-primary flex-shrink-0" />
                 <span
-                  className="text-sm"
+                  className="text-xs sm:text-sm"
                   style={{ color: "var(--color-text-secondary)" }}
                 >
                   {personalInfo.phone}
@@ -172,15 +177,15 @@ const Hero = () => {
               </a>
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="flex items-center gap-2 px-4 py-2 rounded-full hover:scale-105 transition-transform"
+                className="flex items-center gap-2 px-3 py-2 rounded-full hover:scale-105 transition-transform text-sm"
                 style={{
                   backgroundColor: "var(--color-background)",
                   border: "1px solid var(--color-border)",
                 }}
               >
-                <Mail size={18} className="text-primary" />
+                <Mail size={16} className="text-primary flex-shrink-0" />
                 <span
-                  className="text-sm"
+                  className="text-xs sm:text-sm break-all"
                   style={{ color: "var(--color-text-secondary)" }}
                 >
                   {personalInfo.email}
@@ -193,29 +198,29 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-wrap justify-center  lg:justify-start gap-4 mb-8"
+              className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4 mb-8"
             >
               <motion.button
                 onClick={handleDownloadResume}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="btn-primary rounded-lg"
+                className="btn-primary rounded-lg w-full sm:w-auto justify-center"
               >
                 <DownloadCloud size={20} />
-                Download Resume
+                <span className="whitespace-nowrap">Download Resume</span>
               </motion.button>
 
               <motion.a
                 href="#contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 w-full sm:w-auto"
                 style={{
                   border: "2px solid var(--color-primary)",
                   color: "var(--color-primary)",
                 }}
               >
-                Get In Touch
+                <span className="whitespace-nowrap">Get In Touch</span>
               </motion.a>
             </motion.div>
 
