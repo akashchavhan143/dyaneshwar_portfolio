@@ -1,6 +1,6 @@
 import heroImg from "./images/HERO_IMAGE.jpg";
 export const personalInfo = {
-  name: "LAVDU DNYANESHWAR JAYRAM JADHAV",
+  name: "DNYANESHWAR JAYRAM JADHAV",
   title: "Social Work Professional | MSW Student",
   location: "Mumbai, Maharashtra",
   phone: "8766438432",
